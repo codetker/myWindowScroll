@@ -1,0 +1,75 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	margin:0 0;
+	padding:0 0;
+	height:100%;
+	width:100%;
+	overflow: hidden;;
+}
+.wrap{
+	font-family:"微软雅黑","宋体", Times, "Times New Roman", serif;
+	font-size:14px;
+	margin:0 0;
+	padding:0 0;
+	height:100%;
+	width:100%;
+	overflow:hidden;
+}
+
+.stage,.page{
+	width: 100%;
+	height: 100%;
+}
+.stage1{
+	background-color:red;
+}
+.stage2{
+	background-color:#fff;
+}
+.stage3{
+	background-color:yellow;
+}
+.stage4{
+	background-color:green;
+}
+.stage5{
+	background-color:blue;
+}
+.page{
+	float: left;
+}
+.page2{
+	background-color: #666;
+}
+.page3{
+	background-color: #ddd;
+}
+.stageControl{
+	position: fixed;
+}
+.stageControl ul li{
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	cursor: pointer;
+}
+.stageControl ul li:hover{
+	color: blue;
+}
+.pageControl{
+	position: fixed;
+	left: 200px;
+}
+.pageControl ul li{
+	float: left;
+	width: 50px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	cursor: pointer;
+}
+.pageControl ul li:hover{
+	color: blue;
+}

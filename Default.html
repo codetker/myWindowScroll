@@ -1,0 +1,60 @@
+﻿<!doctype html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content="" name="keywords" />
+<meta content="" name="description" />
+<meta name="author" content="codetker" />
+<head>
+<title>window对象滚动插件</title>
+<link href="style/reset.css" rel="stylesheet" type="text/css">
+<link href="style/style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.codetker.windowScroll.js"></script>
+</head>
+
+<body scroll="no">
+	<div class="wrap" style="dispaly:block;">
+        <div class="stageControl">
+            <ul>
+                <li>stage1</li>
+                <li>stage2</li>
+                <li>stage3</li>
+                <li>stage4</li>
+                <li>stage5</li>
+            </ul>
+        </div>
+    	<div class="stage stage1">
+            <div class="pageControl">
+                <ul>
+                    <li>page1</li>
+                    <li>page2</li>
+                    <li>page3</li>
+                </ul>
+            </div>
+            <div class="page page1"></div>
+            <div class="page page2"></div>
+            <div class="page page3"></div>   
+        </div>
+        <div class="stage stage2"></div>
+        <div class="stage stage3"></div>
+        <div class="stage stage4"></div>
+        <div class="stage stage5"></div>
+    </div>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".wrap").windowScroll({
+            'choose' : 0,
+            'verticalSpeed' : 2, //控制垂直滚动速度
+            'horizontalSpeed' : 1,
+            'objControlUl': '.wrap .stageControl'
+        });
+        $(".stage1").windowScroll({
+            'choose': 1,
+            'verticalSpeed' : 1,
+            'horizontalSpeed' : 1,//控制水平滚动速度
+            'objControlUl': '.stage1 .pageControl'
+        });
+    });
+</script>
+</body>
+</html>
