@@ -71,7 +71,7 @@
 			}
 
 
-			//阻止默认行为和冒泡,这里可以定义多个方法都要用到的辅助函数
+			//阻止默认行为和冒泡
 			function stopDefaultAndBubble(e) {
 				e = e || window.event;
 				if (e.preventDefault) {
@@ -180,7 +180,7 @@
 
 				function move() {
 					$(windowobject).animate({
-						"scrollTop": target + "px"
+						'scrollTop': target + 'px'
 					}, 1000 * speed, function() {
 						crash(1, target, 20, 150, -1); //调用撞击函数,先撞顶部,target变成当前页面了
 					});
@@ -190,7 +190,7 @@
 					if (distant <= 15 || time > 150) {
 						stop = 1; //停止碰撞
 						$(windowobject).animate({
-							"scrollTop": termin + "px"
+							'scrollTop': termin + 'px'
 						}, time, function() {
 							stop = 0;
 						});
@@ -206,14 +206,14 @@
 								direction = 0;
 								if (aspect == 1) {
 									$(windowobject).animate({
-										"scrollTop": "-=" + distant + "px"
+										'scrollTop': '-=' + distant + 'px'
 									}, time, function() {
 										crash(direction, termin, distant * 0.6, time, 1);
 										after_crash(distant, time, termin);
 									});
 								} else {
 									$(windowobject).animate({
-										"scrollTop": "+=" + distant + "px"
+										'scrollTop': '+=' + distant + 'px'
 									}, time, function() {
 										crash(direction, termin, distant * 0.6, time, -1);
 										after_crash(distant, time, termin);
@@ -224,14 +224,14 @@
 								direction = 1;
 								if (aspect == 1) {
 									$(windowobject).animate({
-										"scrollTop": termin + "px"
+										'scrollTop': termin + 'px'
 									}, time, function() {
 										crash(direction, termin, distant * 0.6, time, 1);
 										after_crash(distant, time, termin);
 									});
 								} else {
 									$(windowobject).animate({
-										"scrollTop": termin + "px"
+										'scrollTop': termin + 'px'
 									}, time, function() {
 										crash(direction, termin, distant * 0.6, time, -1);
 										after_crash(distant, time, termin);
@@ -309,10 +309,10 @@
 			});
 
 			function getPageIndex() {
-				pageIndex = (-1) * Math.round(parseInt($(obj).css("margin-left")) / windowWidth);
+				pageIndex = (-1) * Math.round(parseInt($(obj).css('margin-left')) / windowWidth);
 			}
 
-			function goLeft(){
+			function goLeft() {
 				getPageIndex();
 				scrollPage(obj, pageIndex, 1);
 			}
@@ -354,7 +354,7 @@
 				var
 					windowobject = obj,
 					direction = 0 || dir,
-					dist = Math.round(parseInt($(obj).css("margin-left"))), //当前页距离左边的margin(负值)
+					dist = Math.round(parseInt($(obj).css('margin-left'))), //当前页距离左边的margin(负值)
 					aim;
 
 				function getAim() {
@@ -365,19 +365,19 @@
 					if (crashButton) {
 						if (type == 'left') {
 							$(windowobject).animate({
-								"margin-left": "+=" + "50px"
+								'margin-left': '+=' + '50px'
 							}, 500).animate({
-								"margin-left": "-=" + "100px"
+								'margin-left': '-=' + '100px'
 							}, 500).animate({
-								"margin-left": "+=" + "50px"
+								'margin-left': '+=' + '50px'
 							}, 500);
 						} else {
 							$(windowobject).animate({
-								"margin-left": "-=" + "50px"
+								'margin-left': '-=' + '50px'
 							}, 500).animate({
-								"margin-left": "+=" + "100px"
+								'margin-left': '+=' + '100px'
 							}, 500).animate({
-								"margin-left": "-=" + "50px"
+								'margin-left': '-=' + '50px'
 							}, 500);
 						}
 					}
@@ -386,12 +386,12 @@
 
 				function move() {
 					$(windowobject).animate({
-							"margin-left": aim + "px" //调用时aim已经有值了，不需要作为参数(默认也会成为参数)
+							'margin-left': aim + 'px' //调用时aim已经有值了，不需要作为参数(默认也会成为参数)
 						},
 						1000 * speed);
 				}
 
-				if (!$(windowobject).is(":animated")) {
+				if (!$(windowobject).is(':animated')) {
 					switch (direction) {
 						case 0:
 							getAim();
