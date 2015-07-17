@@ -23,6 +23,8 @@
                 <li>stage5</li>
             </ul>
         </div>
+        <div class="toTop">Top</div>
+        <div class="toBottom">Bottom</div>
     	<div class="stage stage1">
             <div class="pageControl">
                 <ul>
@@ -31,6 +33,8 @@
                     <li>page3</li>
                 </ul>
             </div>
+            <div class="toLeft">Left</div>
+            <div class="toRight">Right</div>
             <div class="page page1"></div>
             <div class="page page2"></div>
             <div class="page page3"></div>   
@@ -42,18 +46,26 @@
     </div>
 <script type="text/javascript">
     $(document).ready(function(){
-        $(".wrap").windowScroll({
-            'choose' : 0,
-            'verticalSpeed' : 2, //控制垂直滚动速度
-            'horizontalSpeed' : 1,
-            'objControlUl': '.wrap .stageControl'
-        });
-        $(".stage1").windowScroll({
-            'choose': 1,
-            'verticalSpeed' : 1,
-            'horizontalSpeed' : 1,//控制水平滚动速度
-            'objControlUl': '.stage1 .pageControl'
-        });
+    $(".wrap").windowScroll({
+        'choose': 0,
+        'verticalSpeed': 1, //控制垂直滚动速度
+        'horizontalSpeed': 1,
+        'objControlUl': '.wrap .stageControl',
+        'list': '.wrap .stage',
+        'crash': true,
+        'toTop': '.toTop',
+        'toBottom': '.toBottom'
+    });
+    $(".stage1").windowScroll({
+        'choose': 1,
+        'verticalSpeed': 1,
+        'horizontalSpeed': 1, //控制水平滚动速度
+        'objControlUl': '.stage1 .pageControl',
+        'list': '.stage1 .page',
+        'crash': true,
+        'toLeft': '.toLeft',
+        'toRight': '.toRight'
+    });
     });
 </script>
 </body>

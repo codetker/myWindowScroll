@@ -22,41 +22,33 @@ body{
 	height: 100%;
 }
 .stage1{
-	background-color:red;
+	background-color:#b9f579;
 }
 .stage2{
-	background-color:#fff;
+	background-color:#d87efa;
 }
 .stage3{
-	background-color:yellow;
+	background-color:#f97171;
 }
 .stage4{
-	background-color:green;
+	background-color:#ffc438;
 }
 .stage5{
-	background-color:blue;
+	background-color:#9ff4d5;
 }
 .page{
 	float: left;
 }
 .page2{
-	background-color: #666;
+	background-color: #fca172;
 }
 .page3{
-	background-color: #ddd;
+	background-color: #b6befc;
 }
 .stageControl{
 	position: fixed;
 }
 .stageControl ul li{
-	width: 100px;
-	height: 30px;
-	line-height: 30px;
-	text-align: center;
-	cursor: pointer;
-}
-.stageControl ul li:hover{
-	color: blue;
 }
 .pageControl{
 	position: fixed;
@@ -64,12 +56,31 @@ body{
 }
 .pageControl ul li{
 	float: left;
-	width: 50px;
-	height: 25px;
-	line-height: 25px;
+}
+.toLeft,.toRight,.toTop,.toBottom{
+	position: fixed;
+}
+.toTop{
+	top:180px;
+}
+.toBottom{
+	top:220px;
+}
+.toLeft{
+	left: 600px;
+}
+.toRight{
+	left: 720px;
+}
+.toLeft,.toRight,.toTop,.toBottom,.pageControl ul li,.stageControl ul li{
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
 	text-align: center;
 	cursor: pointer;
+	color:#fff;
+	background-color: #aaa;
 }
-.pageControl ul li:hover{
-	color: blue;
+.toLeft:hover,.toRight:hover,.toTop:hover,.toBottom:hover,.pageControl ul li:hover,.stageControl ul li:hover{
+	background-color: #888;
 }
