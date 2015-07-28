@@ -1,0 +1,113 @@
+@charset "utf-8";
+/* CSS Document */
+/* whole */
+ body{
+	margin  : 0 0;
+	padding : 0 0;
+	height  : 100%;
+	width   : 100%;
+	overflow: hidden;;
+ }
+ .wrap{
+	font-family: "微软雅黑","宋体", Times, "Times New Roman", serif;
+	font-size  : 14px;
+	margin     : 0 0;
+	padding    : 0 0;
+	height     : 100%;
+	width      : 100%;
+	overflow   : hidden;
+ }
+/* whole end */
+
+/* stage */
+ .stage,.page{
+	width : 100%;
+	height: 100%;
+ }
+ .stage1{
+	background-color: #b9f579;
+ }
+ .stage2{
+	background-color: #d87efa;
+ }
+ .stage3{
+	background-color: #f97171;
+ }
+ .stage4{
+	background-color: #ffc438;
+ }
+ .stage5{
+	background-color: #9ff4d5;
+ }
+ .stageControl{
+	position: fixed;
+ }
+ .stageControl ul li{
+ 	-webkit-transition-duration: 0.3s;
+ 	-o-transition-duration     : 0.3s;
+ 	transition-duration        : 0.3s;
+	/* 兼容低版本IE，add PIE.htc or IE-css3.htc here */
+ }
+ .stageSelect{
+ 	background-color: #888 !important;
+ }
+/* stage end */
+
+/* page */
+ .page{
+	float: left;
+ }
+ .page2{
+	background-color: #fca172;
+ }
+ .page3{
+	background-color: #b6befc;
+ }
+ .pageControl{
+	position: absolute;
+	left    : 200px;
+ }
+ .pageControl ul li{
+	float   : left;
+	-webkit-transition-duration: 0.3s;
+ 	-o-transition-duration     : 0.3s;
+ 	transition-duration        : 0.3s;
+	/* 兼容低版本IE，add PIE.htc or IE-css3.htc here */
+ }
+ .pageSelect{
+ 	background-color: #888 !important;
+ }
+/* page end */
+
+/* left,right,top,bottom button */
+ .toTop,.toBottom{
+	position: fixed;
+ }
+ .toTop{
+	top :180px;
+ }
+ .toBottom{
+	top :220px;
+ }
+ .toLeft,.toRight{
+ 	position: absolute;
+ }
+ .toLeft{
+	left: 600px;
+ }
+ .toRight{
+	left: 720px;
+ }
+ .toLeft,.toRight,.toTop,.toBottom,.pageControl ul li,.stageControl ul li{
+	width : 100px;
+	height: 30px;
+	line-height: 30px;
+	text-align : center;
+	cursor: pointer;
+	color : #fff;
+	background-color: #aaa;
+ }
+ .toLeft:hover,.toRight:hover,.toTop:hover,.toBottom:hover,.pageControl ul li:hover,.stageControl ul li:hover{
+	background-color: #888;
+ }
+/* left,right,top,bottom button end */

@@ -1,0 +1,29 @@
+{
+  "name": "myWindowScroll",
+  "version": "0.2",
+  "description": "windowScroll plugin",
+  "file": "jquery.codetker.myWindowScroll",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codetker/myWindowScroll.git"
+  },
+  "keywords": [
+    "windowScroll"
+  ],
+  "author": "codetker",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/codetker/myWindowScroll/issues"
+  },
+  "homepage": "https://github.com/codetker/myWindowScroll",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.11.2",
+    "grunt-contrib-uglify": "^0.9.1",
+    "jquery": "~1.9.0"
+  }
+}
