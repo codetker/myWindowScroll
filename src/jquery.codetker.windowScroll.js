@@ -58,6 +58,9 @@
 					'min-width': $(window).width() + 'px',
 					'height': $(window).height() + 'px'
 				});
+
+				//初始化
+				markStage();
 			}
 			setCss();
 
@@ -322,6 +325,9 @@
 					'width': windowWidth + 'px',
 					'min-height': $(window).height() + 'px'
 				});
+
+				//初始化
+				markPage();
 			}
 			setCss();
 
